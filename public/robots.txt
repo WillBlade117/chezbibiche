@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Lien direct vers le sitemap généré automatiquement par Astro
+Sitemap: https://[DOMAINE-DU-CLIENT.fr]/sitemap-index.xml

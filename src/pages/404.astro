@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Page introuvable - 404" description="La page que vous recherchez n'existe pas.">
+  <div class="min-h-[75vh] flex flex-col items-center justify-center px-6 text-center">
+    <div class="relative">
+      <h1 class="text-9xl font-extrabold text-couleur-1 opacity-10">404</h1>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <h2 class="text-3xl font-bold text-gray-800">Oups !</h2>
+      </div>
+    </div>
+    
+    <h3 class="text-xl font-semibold text-gray-700 mt-2 mb-4">Cette page semble introuvable.</h3>
+    <p class="text-gray-500 mb-10 max-w-md">
+      L'URL saisie est peut-être incorrecte, ou la page a été déplacée lors d'une mise à jour.
+    </p>
+    
+    <a href="/" class="inline-flex items-center justify-center bg-couleur-2 hover:bg-couleur-1 text-white font-medium py-3 px-8 rounded-full transition-colors duration-300 shadow-md">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      Retourner à l'accueil
+    </a>
+  </div>
+</Layout>
