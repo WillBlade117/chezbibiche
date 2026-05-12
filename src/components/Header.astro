@@ -15,6 +15,11 @@ const textClasses =
     ? "text-white/70 hover:text-bibiche-terra"
     : "text-black/60 hover:text-bibiche-terra";
 
+const mobileMenuBg =
+  variant === "dark"
+    ? "bg-black/95 border-white/10"
+    : "bg-white/95 border-black/5";
+
 const logoSrc = variant === "dark" ? "/logo-couleur.svg" : "/logo-marron.svg";
 
 const navLinks = [
@@ -33,7 +38,7 @@ const navLinks = [
       <img src={logoSrc} alt="Chez Bibiche" class="h-10 md:h-12 w-auto" />
     </a>
 
-    <div class="flex items-center gap-6 lg:gap-10">
+    <div class="flex items-center gap-4 lg:gap-10">
       <nav class="hidden md:flex items-center gap-8">
         {
           navLinks.map((link) => (
@@ -49,12 +54,72 @@ const navLinks = [
 
       <a
         href="tel:0400000000"
-        class="bg-bibiche-terra text-white px-5 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-bibiche-vert transition-all shadow-lg active:scale-95"
+        class="bg-bibiche-terra text-white px-5 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-bibiche-vert transition-all shadow-lg active:scale-95 hidden xs:block"
       >
         Commander
       </a>
+
+      <button
+        id="menu-toggle"
+        class={`md:hidden p-2 focus:outline-none transition-colors ${textClasses}`}
+        aria-label="Ouvrir le menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="w-7 h-7"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
     </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class={`hidden absolute top-20 left-0 w-full border-b shadow-2xl backdrop-blur-md transition-all md:hidden ${mobileMenuBg}`}
+  >
+    <nav class="flex flex-col p-6 gap-6">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class={`text-xs font-black uppercase tracking-[0.2em] transition-colors ${textClasses}`}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <div class="h-px w-full bg-black/10 dark:bg-white/10 mt-2 mb-2"></div>
+      <a
+        href="tel:0400000000"
+        class="bg-bibiche-terra text-white px-5 py-4 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-bibiche-vert transition-all text-center shadow-lg"
+      >
+        Appeler pour commander
+      </a>
+    </nav>
   </div>
 </header>
 
 <div class="h-20"></div>
+
+<script>
+  // On attend que le DOM soit chargé (bonne pratique Astro)
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        // Alterne la classe 'hidden' de Tailwind pour afficher/cacher le menu
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
