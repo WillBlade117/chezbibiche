@@ -252,37 +252,35 @@ const categories = [
 ];
 ---
 
-<section id="menu" class="bg-white py-20 border-b border-black/5">
-  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+<section id="menu" class="bg-white py-20">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
     <div class="space-y-20">
       {
         categories.map((category) => (
           <div>
-            <div class="flex items-center gap-4 mb-10">
+            <div class="flex flex-col items-center mb-12">
               <img
                 src="/icone-couleur.svg"
                 alt=""
-                class="w-8 h-8 opacity-80"
+                class="w-10 h-10 mb-4"
                 aria-hidden="true"
               />
-              <h3 class="font-display font-black text-2xl text-black uppercase tracking-tight">
+              <h3 class="font-display font-black text-3xl text-black uppercase tracking-tighter">
                 {category.title}
               </h3>
-              <div class="h-px bg-black/10 flex-grow" />
             </div>
 
-            <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
+            <div class="space-y-8">
               {category.items.map((item) => (
-                <div class="p-6 border border-black/5 rounded-xl hover:border-bibiche-vert/30 transition-all group">
-                  <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-black text-black uppercase group-hover:text-bibiche-vert transition-colors">
-                      {item.name}
-                    </h4>
+                <div class="group">
+                  <div class="flex items-baseline justify-between gap-2 mb-1">
+                    <h4 class="font-black text-black uppercase">{item.name}</h4>
+                    <div class="flex-grow border-b-2 border-dotted border-black/10 mx-2" />
                     <span class="font-black text-bibiche-terra">
                       {item.price} €
                     </span>
                   </div>
-                  <p class="text-black/60 text-sm">{item.desc}</p>
+                  <p class="text-black/50 text-sm italic">{item.desc}</p>
                 </div>
               ))}
             </div>

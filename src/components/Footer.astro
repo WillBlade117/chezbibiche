@@ -1,88 +1,126 @@
 ---
-import { Image } from "astro:assets";
-import imgMap from "../assets/map.jpg";
-
 const currentYear = new Date().getFullYear();
-
-const hours = [
-  { day: "Lundi au Vendredi", time: "08h00 - 15h00" },
-  { day: "Samedi & Dimanche", time: "Fermé" }
-];
 ---
 
-<footer id="info" class="bg-slate-900 text-slate-300 pt-20 pb-8 border-t-4 border-amber-500">
+<footer class="bg-black pt-16 pb-8 border-t border-bibiche-vert/20">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
-    
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 mb-16 items-center">
-      
-      <div class="space-y-10">
-        
-        <div>
-          <h2 class="font-display text-4xl text-amber-500 mb-4">Chez Bibiche</h2>
-          <p class="text-slate-400 text-lg leading-relaxed max-w-md">
-            Votre pause gourmande au cœur de la Zone Industrielle. Mangez bien, mangez vite, et reprenez des forces.
-          </p>
-        </div>
-
-        <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 hover:border-amber-500/50 transition-colors">
-          <p class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-2">Passez commande</p>
-          <a href="tel:0400000000" class="inline-block text-3xl md:text-4xl font-bold text-white hover:text-amber-500 transition-colors">
-            📞 04 00 00 00 00
-          </a>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-8">
-          <div>
-            <h3 class="text-sm font-bold uppercase tracking-wider text-amber-500 mb-3">Adresse</h3>
-            <address class="not-italic text-slate-300">
-              1ère Avenue, Z.I. de Carros<br />
-              06510 Carros
-            </address>
-            <a href="https://maps.google.com" target="_blank" class="inline-block mt-3 text-sm font-medium text-white border-b border-slate-500 hover:text-amber-500 hover:border-amber-500 transition-colors pb-0.5">
-              Itinéraire GPS →
-            </a>
-          </div>
-          
-          <div>
-            <h3 class="text-sm font-bold uppercase tracking-wider text-amber-500 mb-3">Horaires</h3>
-            <ul class="space-y-3">
-              {hours.map((h) => (
-                <li class="flex flex-col">
-                  <span class="font-medium text-white">{h.day}</span>
-                  <span class={h.time === "Fermé" ? "text-slate-500 italic text-sm mt-0.5" : "text-amber-400 font-bold mt-0.5"}>
-                    {h.time}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        
-      </div>
-
-      <div class="relative h-[350px] lg:h-[450px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 group">
-        <a href="https://maps.google.com" target="_blank" class="block w-full h-full cursor-pointer" aria-label="Voir sur Google Maps">
-          <Image 
-            src={imgMap}
-            alt="Plan d'accès Chez Bibiche à Carros" 
-            class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-            format="webp"
-          />
-          <div class="absolute inset-0 bg-slate-900/20 pointer-events-none group-hover:bg-transparent transition-colors duration-500"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+      <div>
+        <a
+          href="/"
+          class="font-display font-black text-3xl text-bibiche-terra tracking-tighter uppercase block mb-4 hover:text-bibiche-vert transition-colors"
+        >
+          Chez Bibiche
         </a>
+        <p class="text-sm text-white/60 leading-relaxed mb-6">
+          Votre pause gourmande et faite maison au cœur de la Zone d'Activité de
+          la Grave. Des produits frais, un service rapide, et le sourire en
+          prime.
+        </p>
       </div>
-      
+
+      <div>
+        <h3
+          class="font-bold mb-5 text-white uppercase tracking-[0.15em] text-xs"
+        >
+          Accès & Contact
+        </h3>
+        <ul class="space-y-4 text-sm text-white/70">
+          <li class="flex items-start gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-bibiche-vert shrink-0 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span>
+              497 Zone d'Activité de la Grave<br />
+              06510 Carros, France
+            </span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-bibiche-vert shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              ></path>
+            </svg>
+            <a
+              href="tel:0400000000"
+              class="hover:text-bibiche-terra transition-colors"
+              >04 00 00 00 00</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3
+          class="font-bold mb-5 text-white uppercase tracking-[0.15em] text-xs"
+        >
+          Horaires d'ouverture
+        </h3>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li class="flex justify-between border-b border-white/10 pb-3">
+            <span>Lundi - Vendredi</span>
+            <span class="font-bold text-white">11h00 - 15h00</span>
+          </li>
+          <li class="flex justify-between pt-1">
+            <span>Samedi & Dimanche</span>
+            <span
+              class="text-bibiche-terra font-bold uppercase text-xs tracking-wider"
+              >Fermé</span
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-500">
-      <p>© {currentYear} Chez Bibiche. Tous droits réservés.</p>
-      
-      <div class="flex gap-6 items-center">
-        <a href="/mentions-legales" class="hover:text-amber-500 transition-colors">Mentions légales</a>
-        <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
-        <span>Création web : <a href="https://william-sart.fr" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-amber-500 transition-colors">William Sart</a></span>
+    <div
+      class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40"
+    >
+      <div
+        class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6"
+      >
+        <span
+          >&copy; {currentYear} ML SNACKING (Chez Bibiche). Tous droits réservés.</span
+        >
+        <a
+          href="/mentions-legales"
+          class="hover:text-bibiche-terra transition-colors">Mentions Légales</a
+        >
+      </div>
+
+      <div class="text-center md:text-right mt-2 md:mt-0">
+        Créé par <a
+          href="https://william-sart.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-bibiche-vert font-bold hover:text-white transition-colors"
+          >William Sart</a
+        >
       </div>
     </div>
-
   </div>
 </footer>

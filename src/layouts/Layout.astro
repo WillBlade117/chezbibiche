@@ -1,29 +1,30 @@
 ---
-import '../styles/global.css';
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/800.css";
+import "../styles/global.css";
 
 interface Props {
   title: string;
-  description? : string;
+  description?: string;
 }
 
 const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="fr" class="scroll-smooth"> <head>
+<html lang="fr" class="scroll-smooth">
+  <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Chez Bibiche - Votre snack gourmand au cœur de la Zone Industrielle de Carros. Produits frais et service rapide." />
+    <meta
+      name="description"
+      content={description || "Chez Bibiche - Snack gourmand à Carros."}
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/icone-couleur.svg" />
     <title>{title}</title>
   </head>
-  <body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col">
-    
+  <body class="bg-white text-black font-sans min-h-screen flex flex-col">
     <slot />
-
   </body>
 </html>
