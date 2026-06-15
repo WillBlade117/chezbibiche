@@ -1,252 +1,182 @@
 ---
 const categories = [
   {
-    title: "Les Burgers",
+    title: "Sandwichs Chauds (Pain ou galette)",
     items: [
       {
-        name: "Le Classic",
-        desc: "Bœuf charolais, cheddar affiné, oignons confits, sauce maison",
-        price: "9.90",
+        name: "Américain Steak",
+        desc: "Salade, tomate, oignon, Cheddar, steak (100g), frites",
+        price: "8,00",
       },
       {
-        name: "Le Bacon Smoky",
-        desc: "Bœuf, double cheddar, poitrine fumée croustillante, sauce BBQ",
-        price: "10.90",
+        name: "Américain Poulet",
+        desc: "Salade, tomate, oignon, Cheddar, poulet, frites",
+        price: "8,00",
       },
       {
-        name: "Le Veggie",
-        desc: "Galette végétale croustillante, avocat frais, yaourt aux herbes",
-        price: "9.50",
+        name: "Américain Merguez",
+        desc: "Salade, tomate, oignon, Cheddar, merguez (x2), frites",
+        price: "8,00",
       },
       {
-        name: "Le Savoyard",
-        desc: "Bœuf, reblochon fondu, lardons allumettes, oignons caramélisés",
-        price: "11.50",
+        name: "Américain Tenders",
+        desc: "Salade, tomate, oignon, Cheddar, tenders, frites",
+        price: "8,00",
       },
       {
-        name: "Le Poulet Crispy",
-        desc: "Filet de poulet pané, cheddar, salade croquante, mayo épicée",
-        price: "9.90",
+        name: "Américain Kebab",
+        desc: "Salade, tomate, oignon, Cheddar, kebab, frites",
+        price: "8,00",
       },
       {
-        name: "Le Chèvre-Miel",
-        desc: "Bœuf, palets de chèvre affiné, miel de Provence, roquette",
-        price: "10.50",
-      },
-      {
-        name: "Le Double Smash",
-        desc: "Double steak smashé, double cheddar, pickles, moutarde douce",
-        price: "12.90",
-      },
-      {
-        name: "Le Truffé",
-        desc: "Bœuf, crème aux éclats de truffe, champignons poêlés, emmental",
-        price: "13.50",
+        name: "Hamburger",
+        desc: "Steak (150g), salade, tomate, oignon, Cheddar, frites",
+        price: "9,50",
       },
     ],
   },
   {
-    title: "Sandwichs & Sur le pouce",
+    title: "Paninis",
     items: [
       {
-        name: "L'Américain",
-        desc: "Steak haché boucher, frites maison, sauce au choix, demi-baguette",
-        price: "8.50",
+        name: "3 Fromages",
+        desc: "Mozzarella, Chèvre, Emmental",
+        price: "5,50",
       },
+      { name: "Poulet", desc: "Tomate, Mozzarella, poulet", price: "5,50" },
       {
-        name: "Le Panini 3 Fromages",
-        desc: "Mozzarella fondante, chèvre, emmental, pointe de miel",
-        price: "6.50",
-      },
-      {
-        name: "Le Panini Poulet",
-        desc: "Émincé de volaille rôti, mozzarella, pesto basilic",
-        price: "7.00",
-      },
-      {
-        name: "Le Wrap Saumon",
-        desc: "Saumon fumé, fromage frais à l'aneth, concombre, jeunes pousses",
-        price: "8.50",
-      },
-      {
-        name: "Le Wrap Crispy",
-        desc: "Poulet croustillant, salade, tomates, sauce César",
-        price: "7.50",
-      },
-      {
-        name: "Le Croque-Monsieur",
-        desc: "Pain de mie brioché, jambon blanc supérieur, béchamel, emmental",
-        price: "6.00",
-      },
-      {
-        name: "Le Croque-Madame",
-        desc: "Notre croque-monsieur surmonté d'un œuf au plat",
-        price: "7.00",
-      },
-      {
-        name: "Le Club Sandwich",
-        desc: "Poulet rôti, bacon, œuf dur, mayonnaise, salade, triple pain toasté",
-        price: "8.90",
+        name: "Mozza",
+        desc: "Tomate, Mozzarella, huile d'olive",
+        price: "5,50",
       },
     ],
   },
   {
-    title: "Salades & Bowls",
+    title: "Assiettes",
     items: [
       {
-        name: "La Bowl Végétale",
-        desc: "Quinoa, avocat, patate douce rôtie, féta, graines de courge",
-        price: "11.90",
+        name: "Steak",
+        desc: "Salade, tomate, oignon, steak (150g), frites",
+        price: "10,00",
       },
       {
-        name: "La Salade César",
-        desc: "Poulet pané, copeaux de parmesan, croûtons dorés, sauce César",
-        price: "12.50",
+        name: "Poulet",
+        desc: "Salade, tomate, oignon, poulet, frites",
+        price: "10,00",
       },
       {
-        name: "Le Poke Saumon",
-        desc: "Saumon cru mariné, mangue, riz vinaigré, sésame, avocat",
-        price: "13.90",
+        name: "Merguez",
+        desc: "Salade, tomate, oignon, merguez (x3), frites",
+        price: "10,00",
       },
       {
-        name: "Le Bowl Teriyaki",
-        desc: "Riz blanc, poulet mariné sauce Teriyaki, edamame, carottes râpées",
-        price: "12.90",
+        name: "Tenders",
+        desc: "Salade, tomate, oignon, tenders, frites",
+        price: "10,00",
       },
       {
-        name: "La Chèvre Chaud",
-        desc: "Toasts de chèvre sur lit de mesclun, noix, miel, tomates cerises",
-        price: "11.50",
-      },
-      {
-        name: "La Salade Italienne",
-        desc: "Burrata crémeuse, tomates confites, jambon cru, pesto",
-        price: "13.50",
-      },
-      {
-        name: "La Niçoise Tradition",
-        desc: "Thon, œuf dur, olives, anchois, tomates, poivrons, radis",
-        price: "12.00",
+        name: "Kebab",
+        desc: "Salade, tomate, oignon, kebab, frites",
+        price: "10,00",
       },
     ],
   },
   {
-    title: "Les Accompagnements",
+    title: "Sandwichs Froids",
     items: [
       {
-        name: "Frites Maison",
-        desc: "Pommes de terre fraîches, double cuisson à la belge",
-        price: "3.50",
+        name: "Pan Bagnat",
+        desc: "Salade, tomate, petit poivron vert, radis, céleri, cébette, œuf, thon, anchois",
+        price: "7,50",
       },
       {
-        name: "Frites Cheddar & Bacon",
-        desc: "Frites maison, sauce cheddar fondue, brisures de bacon",
-        price: "5.50",
+        name: "Poulet",
+        desc: "Salade, tomate, Emmental, œuf, poulet",
+        price: "7,00",
       },
       {
-        name: "Frites de Patate Douce",
-        desc: "Croustillantes, servies avec une sauce yaourt aux herbes",
-        price: "4.50",
+        name: "Thon",
+        desc: "Salade, tomate, Emmental, œuf, thon",
+        price: "7,00",
       },
       {
-        name: "Onion Rings",
-        desc: "Beignets d'oignons dorés (par 8), sauce BBQ",
-        price: "4.50",
+        name: "Jambon",
+        desc: "Salade, tomate, Emmental, œuf, jambon",
+        price: "7,00",
+      },
+      { name: "Mozza", desc: "Salade, tomate, Mozzarella", price: "6,50" },
+    ],
+  },
+  {
+    title: "Salades",
+    items: [
+      { name: "Mozza", desc: "Salade, tomate, Mozzarella", price: "7,00" },
+      {
+        name: "Poulet",
+        desc: "Salade, tomate, fromage, œuf, poulet",
+        price: "8,50",
       },
       {
-        name: "Tenders de Poulet",
-        desc: "Aiguillettes de poulet panées maison (par 4)",
-        price: "6.00",
+        name: "Tenders",
+        desc: "Salade, tomate, fromage, œuf, tenders",
+        price: "8,50",
       },
       {
-        name: "Mozzarella Sticks",
-        desc: "Bâtonnets de fromage fondants et panés (par 5)",
-        price: "5.00",
+        name: "Niçoise",
+        desc: "Salade, tomate, petit poivron vert, radis, céleri, cébette, œuf, thon, anchois",
+        price: "8,50",
       },
       {
-        name: "Nuggets Maison",
-        desc: "Bouchées de filet de poulet croustillantes (par 6)",
-        price: "5.50",
-      },
-      {
-        name: "Petite Salade Verte",
-        desc: "Mesclun frais, vinaigrette légère au vinaigre balsamique",
-        price: "2.50",
+        name: "Chèvre chaud",
+        desc: "Salade, tomate, Chèvre chaud, miel",
+        price: "8,50",
       },
     ],
   },
   {
-    title: "Les Douceurs",
+    title: "Petite Faim",
     items: [
+      { name: "Nuggets (par 6)", desc: "", price: "5,00" },
+      { name: "Nuggets (par 9)", desc: "", price: "6,00" },
+      { name: "Sticks (par 6)", desc: "", price: "6,00" },
+      { name: "Sticks (par 9)", desc: "", price: "8,50" },
+      { name: "Petite frite", desc: "", price: "3,00" },
+      { name: "Grande frite", desc: "", price: "3,50" },
       {
-        name: "Tiramisu Classique",
-        desc: "Café corsé, mascarpone onctueux, cacao amer",
-        price: "4.50",
+        name: "Cheeseburger",
+        desc: "Salade, tomate, oignon, Cheddar, steak",
+        price: "5,00",
       },
-      {
-        name: "Tiramisu Spéculoos",
-        desc: "Crème mascarpone, brisures de spéculoos croquantes",
-        price: "4.50",
-      },
-      {
-        name: "Mousse au Chocolat",
-        desc: "Chocolat noir 70%, recette traditionnelle façon grand-mère",
-        price: "4.00",
-      },
-      {
-        name: "Cheesecake Fruits Rouges",
-        desc: "Base biscuitée, fromage frais, coulis maison",
-        price: "5.00",
-      },
-      {
-        name: "Salade de Fruits",
-        desc: "Fruits de saison découpés sur place chaque matin",
-        price: "3.50",
-      },
-      {
-        name: "Cookie Maison",
-        desc: "Cœur moelleux, pépites de chocolat noir et noix de pécan",
-        price: "2.50",
-      },
-      {
-        name: "Muffin Myrtilles",
-        desc: "Gâteau moelleux au cœur fruité",
-        price: "3.00",
-      },
-      {
-        name: "Fromage Blanc",
-        desc: "Au miel de la région et éclats de noix torréfiées",
-        price: "3.50",
-      },
+      { name: "Panini Nutella", desc: "", price: "3,50" },
     ],
   },
   {
-    title: "Les Boissons",
+    title: "Boissons",
     items: [
       {
-        name: "Coca-Cola / Zéro",
-        desc: "Canette 33cl, servie très fraîche",
-        price: "2.50",
+        name: "Soda, 33cl",
+        desc: "Coca, Coca Zéro, Coca Cherry, Ice Tea, Oasis tropical, Oasis cassis, Oasis framboise, Sprite, Schweppes, Orangina, Liptonic, Fanta citron, Fanta orange, Panaché",
+        price: "2,00",
       },
-      { name: "Ice Tea Pêche", desc: "Canette 33cl", price: "2.50" },
-      { name: "Oasis Tropical", desc: "Canette 33cl", price: "2.50" },
-      { name: "Perrier", desc: "Eau gazeuse, Canette 33cl", price: "2.50" },
-      { name: "Eau Minérale", desc: "Bouteille 50cl, plate", price: "2.00" },
-      {
-        name: "Jus de Fruits Granini",
-        desc: "Pomme, Orange ou ACE, 25cl",
-        price: "3.00",
-      },
-      {
-        name: "Bière Blonde Locale",
-        desc: "Pression artisanale, 33cl",
-        price: "4.50",
-      },
-      {
-        name: "Café Expresso Malongo",
-        desc: "Torréfaction locale, l'incontournable de fin de repas",
-        price: "1.50",
-      },
+      { name: "Coca, 1,25L", desc: "", price: "3,00" },
+      { name: "Redbull", desc: "", price: "2,50" },
+      { name: "Eau plate, 50cl", desc: "", price: "1,00" },
+      { name: "Eau plate, 1,5L", desc: "", price: "1,50" },
+      { name: "Eau gazeuse, 50cl", desc: "", price: "1,00" },
+      { name: "Café", desc: "", price: "1,50" },
+    ],
+  },
+  {
+    title: "Bières & Vins",
+    items: [
+      { name: "Heineken, 25cl", desc: "Bière", price: "2,50" },
+      { name: "Desperados, 33cl", desc: "Bière", price: "3,00" },
+      { name: "Desperados, 50cl", desc: "Bière", price: "4,00" },
+      { name: "1664, 33cl", desc: "Bière", price: "3,00" },
+      { name: "1664, 50cl", desc: "Bière", price: "4,00" },
+      { name: "Rosé, verre", desc: "Vin", price: "1,60" },
+      { name: "Rosé, 25cl", desc: "Vin", price: "2,50" },
+      { name: "Rosé, 50cl", desc: "Vin", price: "5,00" },
     ],
   },
 ];
@@ -276,6 +206,7 @@ const categories = [
       </p>
     </div>
   </div>
+
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="space-y-20">
       {
@@ -291,7 +222,7 @@ const categories = [
               <h3 class="font-display font-black text-2xl text-black uppercase tracking-tight">
                 {category.title}
               </h3>
-              <div class="h-px bg-black/10 flex-grow" />
+              <div class="h-px bg-black/10 grow" />
             </div>
 
             <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
@@ -301,17 +232,36 @@ const categories = [
                     <h4 class="font-black text-black uppercase group-hover:text-bibiche-vert transition-colors">
                       {item.name}
                     </h4>
-                    <span class="font-black text-bibiche-terra">
+                    <span class="font-black text-bibiche-terra shrink-0 ml-4">
                       {item.price} €
                     </span>
                   </div>
-                  <p class="text-black/60 text-sm">{item.desc}</p>
+                  {item.desc && (
+                    <p class="text-black/60 text-sm">{item.desc}</p>
+                  )}
                 </div>
               ))}
             </div>
           </div>
         ))
       }
+
+      <!-- Encart Sauces & Suppléments -->
+      <div class="p-6 bg-black/5 rounded-xl border border-black/5 mt-12">
+        <h3
+          class="font-display font-black text-xl text-black uppercase tracking-tight mb-4"
+        >
+          Sauces & Suppléments
+        </h3>
+        <p class="text-sm text-black/80 mb-2">
+          <strong>Sauces :</strong> Mayonnaise, Ketchup, Moutarde, Samouraï, Algérienne,
+          Harissa, Biggy, Blanche, Barbecue, Curry, Andalouse, Poivre.
+        </p>
+        <p class="text-sm text-black/80">
+          <strong>Suppléments :</strong> Fromage (1,00 €), Viande (3,00 €), Œuf (1,50
+          €)
+        </p>
+      </div>
     </div>
   </div>
 </section>
